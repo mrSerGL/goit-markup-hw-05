@@ -187,15 +187,30 @@ body {
 }
 
 .nav-link {
+  position: relative;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--headers-text-color);
+}
 
+.nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  opacity: 0;
 }
 
 .nav-list .nav-list-item:not(:last-child) {
@@ -205,6 +220,10 @@ body {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-text-color);
+}
+
+.nav-link:hover::after {
+  opacity: 1;
 }
 
 /* ===== header mail telephone ===== */
