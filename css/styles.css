@@ -20,6 +20,7 @@ html {
   --headers-text-color: #212121;
   --button-text-color-one: #fff;
   --work-label-text: #fff;
+  --portfolio-overlay-text-color: #fff;
 
   /* ===== BG colors ===== */
 
@@ -202,7 +203,7 @@ body {
 
 .nav-link::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   display: block;
@@ -831,6 +832,7 @@ body {
 }
 
 .portfolio-container {
+  position: relative;
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -854,6 +856,37 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
   /* outline: 1px solid #eeeeee; */
+}
+
+.portfolio-link .portfolio-overlay-box:hover {
+  opacity: 1;
+}
+
+.portfolio-overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 294px;
+
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.portfolio-overlay-text {
+  display: block;
+  width: 322px;
+  height: 168px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--portfolio-overlay-text-color);
 }
 
 .portfolio-list-title {
