@@ -140,10 +140,6 @@ body {
   outline-offset: -2 px; */
 }
 
-.nav-link.curent {
-  color: var(--accent-text-color);
-}
-
 /* ====== HEADER ====== */
 
 .header {
@@ -222,9 +218,18 @@ body {
   margin-right: 50px;
 }
 
+.nav-link.curent {
+  color: var(--accent-text-color);
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-text-color);
+}
+
+/* === подчеркивание на текущей странице ===== ??????? не работает */
+.nav-link.curent .nav-link::after {
+  opacity: 1;
 }
 
 .nav-link:hover::after {
@@ -736,6 +741,15 @@ body {
   color: #ffffff;
 }
 
+.address-item-one,
+.address-item-two,
+.address-item-three {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 50ms;
+}
+
 /* === footer part two === */
 
 .footer-social-title {
@@ -775,6 +789,11 @@ body {
 
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 50ms;
 }
 
 .footer-social-icon {
@@ -858,7 +877,12 @@ body {
   /* outline: 1px solid #eeeeee; */
 }
 
-.portfolio-link .portfolio-overlay-box:hover {
+.portfolio-overlay-box:hover,
+.portfolio-overlay-box:focus {
+  opacity: 1;
+}
+
+.portfolio-link:hover .portfolio-overlay-box {
   opacity: 1;
 }
 
