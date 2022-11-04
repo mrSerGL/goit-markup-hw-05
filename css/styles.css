@@ -46,14 +46,12 @@ html {
   --fill-svg-icons: #afb1b8;
   --fill-footer-socials: #fff;
 
-
-/* ===== transition propertys ===== */
+  /* ===== transition propertys ===== */
 
   --time-transition: 250ms;
   --function-transition: cubic-bezier(0.4, 0, 0.2, 1);
   --delay-transition: 50ms;
-rans
-  }
+}
 
 /* ===== BASE STYLES ===== */
 
@@ -677,7 +675,7 @@ body {
   border: 1px solid currentColor;
   border-radius: 4px;
 
-  transition-property: color border;
+  transition-property: color border-color;
   transition-duration: var(--time-transition);
   transition-timing-function: var(--function-transition);
   transition-delay: var(--delay-transition);
