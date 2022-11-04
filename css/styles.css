@@ -45,7 +45,15 @@ html {
 
   --fill-svg-icons: #afb1b8;
   --fill-footer-socials: #fff;
-}
+
+
+/* ===== transition propertys ===== */
+
+  --time-transition: 250ms;
+  --function-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  --delay-transition: 50ms;
+rans
+  }
 
 /* ===== BASE STYLES ===== */
 
@@ -601,6 +609,11 @@ body {
   color: var(--fill-svg-icons);
 
   border-radius: 50%;
+
+  transition-property: background-color color;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 .team-social-svg {
@@ -665,9 +678,9 @@ body {
   border-radius: 4px;
 
   transition-property: color border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 50ms;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 .clients-logos-logo {
@@ -750,9 +763,9 @@ body {
 .address-item-two,
 .address-item-three {
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 50ms;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 /* === footer part two === */
@@ -796,9 +809,9 @@ body {
   border-radius: 50%;
 
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 50ms;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 .footer-social-icon {
