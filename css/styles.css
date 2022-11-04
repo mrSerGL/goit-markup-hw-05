@@ -917,19 +917,17 @@ body {
 
 .portfolio-link {
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  /* outline: 1px solid #eeeeee; */
-}
-
-.portfolio-overlay-box:hover,
-.portfolio-overlay-box:focus {
-  opacity: 1;
 }
 
 .portfolio-link:hover .portfolio-overlay-box,
@@ -951,6 +949,11 @@ body {
 
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 
 .portfolio-overlay-text {
