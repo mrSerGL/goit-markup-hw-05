@@ -874,6 +874,11 @@ body {
   background: #f5f4fa;
 
   padding: 6px 22px;
+
+  transition-property: background-color color;
+  transition-duration: var(--time-transition);
+  transition-timing-function: var(--function-transition);
+  transition-delay: var(--delay-transition);
 }
 .portfolio-filter-item:not(:last-of-type) {
   margin-right: 8px;
