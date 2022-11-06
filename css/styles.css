@@ -258,7 +258,7 @@ body {
   color: var(--accent-text-color);
 }
 
-.nav-link.current::after,
+.nav-link.curent::after,
 .nav-link:hover::after,
 .nav-link:focus::after {
   opacity: 1;
