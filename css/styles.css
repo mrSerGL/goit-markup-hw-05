@@ -249,7 +249,7 @@ body {
   margin-right: 50px;
 }
 
-.nav-link.curent {
+.nav-link.current {
   color: var(--accent-text-color);
 }
 
@@ -258,7 +258,7 @@ body {
   color: var(--accent-text-color);
 }
 
-.nav-link.curent::after,
+.nav-link.current::after,
 .nav-link:hover::after,
 .nav-link:focus::after {
   opacity: 1;
