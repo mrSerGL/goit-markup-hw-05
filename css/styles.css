@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  border-color: transparent;
+}
+
 :root {
   /* ===== fonts ===== */
   --first-font: 'Roboto', sans-serif;
@@ -892,7 +896,7 @@ body {
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scaleY(1);
 
   z-index: var(--zind-hero-modal);
 
@@ -912,7 +916,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -70%) scale(0.2);
+  transform: translate(-50%, -70%) scaleY(0.1);
 }
 
 .modal-close-btn {
