@@ -60,7 +60,7 @@ html {
 
   --time-transition: 250ms;
   --function-transition: cubic-bezier(0.4, 0, 0.2, 1);
-  --delay-transition: 150ms;
+  --delay-transition: 50ms;
 
   /* ===== other ===== */
 
@@ -912,7 +912,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -70%) scale(1.2);
+  transform: translate(-50%, -70%) scale(0.2);
 }
 
 .modal-close-btn {
