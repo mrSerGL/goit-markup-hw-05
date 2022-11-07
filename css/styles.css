@@ -264,10 +264,6 @@ body {
   opacity: 1;
 }
 
-/* .nav-link:hover::after {
-  opacity: 1;
-} */
-
 /* ===== header mail telephone ===== */
 
 .mail-tel-list {
@@ -895,8 +891,9 @@ body {
   /* === центровка модального окна ===  */
   top: 50%;
   left: 50%;
-  /* transform: translateX(-50%) translateY(-50%); */
+
   transform: translate(-50%, -50%) scale(1);
+
   z-index: var(--zind-hero-modal);
 
   width: 528px;
@@ -915,7 +912,7 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -70%) scale(0.7);
+  transform: translate(-50%, -70%) scale(1.2);
 }
 
 .modal-close-btn {
@@ -935,7 +932,6 @@ body {
 
   padding: 0;
 
-  /* background: var(--modal-close-btn-color); */
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -944,9 +940,7 @@ body {
   /* transform: translate(-8px, 8px); */
 }
 
-/* ============================= PORTFOLIO ======================================================== */
-
-/* ===== PORTFOLIO MAIN ===== */
+/* ================= PORTFOLIO ==================== */
 
 /* ===== portfolio filters ===== */
 
@@ -1018,17 +1012,6 @@ body {
   transition-delay: var(--delay-transition);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-link:hover .portfolio-overlay-box,
-.portfolio-link:focus .portfolio-overlay-box {
-  opacity: 1;
-}
-
 .portfolio-overlay-box {
   position: absolute;
   top: 0;
@@ -1044,10 +1027,26 @@ body {
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 
-  transition-property: opacity;
+  transform: translateY(294px);
+
+  transition-property: opacity transform;
   transition-duration: var(--time-transition);
   transition-timing-function: var(--function-transition);
   transition-delay: var(--delay-transition);
+
+  outline: 2px solid red;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-link:hover .portfolio-overlay-box,
+.portfolio-link:focus .portfolio-overlay-box {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-overlay-text {
